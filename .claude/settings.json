@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [],
+    "deny": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if command -v biome &> /dev/null && [ -f biome.json ]; then biome format --write \"$CLAUDE_TOOL_ARG_file_path\" 2>/dev/null || true; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
