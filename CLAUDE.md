@@ -37,6 +37,7 @@ npx convex dev       # Convex server (separate terminal)
 ## CLIs
 - `bunx shadcn@latest add [name]` - Add component
 - `npx convex env set KEY val` - Set env variable
+- `vercel deploy` - Deploy to preview
 - `gh pr create` - Create PR
 
 ## Hooks (Auto-Run on Edit/Write)
